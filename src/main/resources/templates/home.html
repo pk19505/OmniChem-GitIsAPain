@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="container text-center">
+    <div>
+        <form th:action="@{/logout}" method="post">
+            <p>
+                Hello  <b>[[${#request.userPrincipal.principal.fullName}]]</b>
+                <br>Welcome to OmniChem</br>
+            </p>
+            <input type="submit" value="Sign Out" />
+        </form>
+    </div>
+
+    <div class="btn-group" role="group">
+        <button type="button" id="file" class="btn btn-primary">File</button>
+        <button type="button" id="create" class="btn btn-primary">Create</button>
+        <button type="button" id="search" class="btn btn-primary">Search</button>
+        <button type="button" id="export" class="btn btn-primary">Export</button>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">About Us</button>
+        <div id="demo" class="collapse">
+            A chemistry data-set management program for collating and cross referencing chemistry data for the purpose of machine learning and further study
+        </div>
+
+    </div>
+    <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">Header
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="w3-dropdown-content w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Dataset1</a>
+                <a href="#" class="w3-bar-item w3-button">Dataset2</a>
+            </div>
+
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">Header
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="w3-dropdown-content w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Dataset3</a>
+                <a href="#" class="w3-bar-item w3-button">Dataset4</a>
+            </div>
+
+        </div>
+        <div class="w3-dropdown-hover">
+            <button class="w3-button">Header
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="w3-dropdown-content w3-bar-block">
+                <a href="#" class="w3-bar-item w3-button">Dataset5</a>
+                <a href="#" class="w3-bar-item w3-button">Dataset6</a>
+            </div>
+
+        </div>
+    </div> </div>
+</body>
+
+
+
+
